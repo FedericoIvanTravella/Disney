@@ -1,0 +1,177 @@
+@font-face {
+    font-family: "disneyfont";
+    src: url("Fuentes/disneyfont.ttf") format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f4eee2;
+}
+
+.fondo {
+    width: 100%;
+    height: 98vh;
+    background-color: #f4eee2;
+    object-fit: contain;
+    animation: opacity 0.8s ease, filter 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.inicio {
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(1, 0);
+}
+
+.encabezado {
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #e7decb;
+}
+
+.encabezado img {
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    margin: 10px;
+    transition: 0.5s ease-in-out;
+}
+
+.encabezado img:hover {
+    filter: drop-shadow(1px 1px 1px black);
+    transform: scale(0.9);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    gap: 10px;
+}
+
+.menu a {
+    margin-right: 10px;
+    text-decoration: none;
+    font-family: "disneyfont", sans-serif;
+    font-size: 28px;
+    color: #000000;
+    transition: all 1s ease-in-out;
+}
+
+.btn_menu {
+    padding-bottom: 5px;
+}
+
+.btn_menu:hover {
+    border-bottom: 5px solid black;
+}
+
+.btn_pixar {
+    padding: 10px;
+    background: #7da9d8;
+    border-radius: 10px;
+    color: #ffffff !important;
+}
+
+.btn_pixar:hover {
+    border-bottom: 5px solid;
+    border-bottom: 5px solid #798c9f;
+}
+
+/* Contactos */ 
+
+.contenedor_contactos {
+    width: 1000px;
+    height: 650px;
+    border-radius: 10px;
+    background-color: #eeeeee;
+    padding: 20px;
+    margin: 50px auto;
+    display: flex;
+    box-shadow: 5px 5px 10px #0e0c0c;   
+}
+
+.contenedor_contactos img {
+    border-radius: 20px 0 0 20px;
+    width: 50%;
+}
+
+form {
+    padding: 20px;
+    width: 50%;
+}
+
+form label {
+    font-family: "disneyfont", sans-serif;
+    font-size: 28px;
+    color: #000000;
+}
+
+form input {
+    width: 98%;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+form textarea {
+    font-size: 22px;
+    width: 98%;
+    height: 190px;
+    border-radius: 15px;
+    margin: 15px 0;
+}
+
+form button {
+    height: 40px;
+    width: 98%;
+    border-radius: 15px;
+    background-color: #480800;
+    font-family: "disneyfont", sans-serif;
+    font-size: 28px;
+    color: #ffffff;
+    transition: 0.5s ease-in-out;
+}
+
+form button:hover {
+    background: linear-gradient(to right, #7C1009, #480800);
+    transform: scale(0.9);
+    box-shadow: 1px 1px 3px black;
+}
+
+footer {
+    height: 120px;
+    background: #e7decb;
+    width: 100%;    
+    padding: 15px;
+}
+
+.infofooter { 
+    display: flex;
+    justify-content: center;
+}
+
+.infofooter img {
+    margin: 0px;
+    height: 85px;
+    width: auto;
+    transition: 0.5s ease-in-out;
+}
+
+.infofooter img:hover {
+    filter: drop-shadow(1px 1px 1px black);
+    transform: scale(1.1);
+}
+
+.infofooter p {
+    margin: 35px;
+    font-family: 20px;
+    line-height: 25px;
+    color: #000000;
+}
