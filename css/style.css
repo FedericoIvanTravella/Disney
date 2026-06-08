@@ -89,7 +89,7 @@ body {
 
 .contenedor_contactos {
     width: 1000px;
-    height: 650px;
+    height: 750px;
     border-radius: 10px;
     background-color: #eeeeee;
     padding: 20px;
@@ -100,12 +100,12 @@ body {
 
 .contenedor_contactos img {
     border-radius: 20px 0 0 20px;
-    width: 50%;
+    width: 150px;
 }
 
 form {
     padding: 20px;
-    width: 50%;
+    width: 85%;
 }
 
 form label {
