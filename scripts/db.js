@@ -5,6 +5,6 @@ export const DB=[
         Precio:63000,
         Stock:10,
         Descripcion:'Aemond Targaryen',    
-        Imagen:'../src/productos/1.png'
+        Imagen:'../src/productos/1.jpg'
     },
 ]

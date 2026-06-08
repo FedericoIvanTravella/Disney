@@ -4,8 +4,8 @@ setTimeout(() => {
         location.href='Pages/home.html'
     }, 800);
 }, 1700);
-
-import { DB } from "./db.js";
+a
+import { DB } from "/scripts/db.js";
 
 function TraerDatos(Datos) {
 
@@ -16,7 +16,7 @@ function TraerDatos(Datos) {
         let ContenedorAux = document.createElement('div')
         ContenedorAux.className = 'tarjetas'
        ContenedorAux.innerHTML =
-`
+`a
 <img src="${i.Imagen}" alt="${i.Nombre}">
 
 <h1>${i.Nombre}</h1>
