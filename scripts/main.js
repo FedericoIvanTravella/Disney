@@ -165,10 +165,69 @@ window.agregarfavorito = function(nombre){
 
     contador++;
 
-    console.log(
-        nombre +
-        " agregado a favoritos"
+    const boton = event.target;
+
+    boton.classList.add(
+        "animar-favorito"
     );
+
+    setTimeout(() => {
+
+        boton.classList.remove(
+            "animar-favorito"
+        );
+
+    },600);
+
+    for(let i = 0; i < 8; i++){
+
+        const estrella =
+        document.createElement("span");
+
+        const iconos = ["✨","⭐","💖"];
+
+        estrella.innerHTML =
+        iconos[
+            Math.floor(
+            Math.random() * iconos.length
+        )
+    ];
+        estrella.classList.add(
+            "estrella"
+        );
+
+        const ancho = boton.offsetWidth;
+        const alto = boton.offsetHeight;
+        estrella.style.left =
+        Math.random() * ancho + "px";
+
+        estrella.style.top =
+        Math.random() * alto + "px";
+        const x =
+        (Math.random() - 0.5) * 150;
+
+        const y =
+        (Math.random() - 0.5) * 150;
+
+        estrella.style.setProperty(
+         "--x",
+         `${x}px`
+        );
+
+        estrella.style.setProperty(
+         "--y",
+         `${y}px`
+        );
+        boton.appendChild(
+            estrella
+        );
+
+        estrella.addEventListener(
+            "animationend",
+            () => estrella.remove()
+        );
+
+    }
 
 }
 
@@ -177,10 +236,59 @@ window.agregarfavorito = function(nombre){
 let carrito = 0;
 
 window.agregarCarrito = function(nombre){
+
     carrito++;
-    console.log(
-        nombre +
-        " agregado al carrito"
+
+    document.getElementById("carrito").innerText =
+    carrito;
+
+    const boton =
+    event.target;
+
+    const tarjeta =
+    boton.closest(".tarjetas");
+
+    const imagen =
+    tarjeta.querySelector("img");
+
+    const copia =
+    imagen.cloneNode(true);
+
+    const origen =
+    imagen.getBoundingClientRect();
+
+    const destino =
+    document
+    .getElementById("iconoCarrito")
+    .getBoundingClientRect();
+
+    copia.classList.add(
+        "imagen-voladora"
+    );
+
+    copia.style.left =
+    origen.left + "px";
+
+    copia.style.top =
+    origen.top + "px";
+
+    copia.style.setProperty(
+        "--x",
+        `${destino.left - origen.left}px`
+    );
+
+    copia.style.setProperty(
+        "--y",
+        `${destino.top - origen.top}px`
+    );
+
+    document.body.appendChild(
+        copia
+    );
+
+    copia.addEventListener(
+        "animationend",
+        () => copia.remove()
     );
 
 }

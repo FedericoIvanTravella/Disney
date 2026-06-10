@@ -28,7 +28,7 @@ export const DB=[
         Nombre:'Peluche de winnie the pooh',
         Precio:50000,
         categoria:'Peluches',
-        Descripcion:'peluche de 25cm',
+        Descripcion:'peluche de 30cm',
         Imagen:'../src/productos/4.jpg'
     },
     {
@@ -36,7 +36,7 @@ export const DB=[
         Nombre:'Muñeca elsa',
         Precio:55000,
         categoria:'Figuras',
-        Descripcion:'peluche de 25cm',
+        Descripcion:'muñeca de 25cm',
         Imagen:'../src/productos/5.jpg'
     },
     {
@@ -44,7 +44,7 @@ export const DB=[
         Nombre:'Muñeca anna',
         Precio:55000,
         categoria:'Figuras',
-        Descripcion:'peluche de 20cm',
+        Descripcion:'muñeca de 20cm',
         Imagen:'../src/productos/6.jpg'
     },
     {
@@ -52,7 +52,7 @@ export const DB=[
         Nombre:'muñeca rapunzel',
         Precio:45000,
         categoria:'Figuras',
-        Descripcion:'peluche de 20cm',
+        Descripcion:'muñeca de 20cm',
         Imagen:'../src/productos/7.jpg'
     },
     {
@@ -60,7 +60,7 @@ export const DB=[
         Nombre:'muñeca la sirenita',
         Precio:45000,
         categoria:'Figuras',
-        Descripcion:'peluche de 20cm',
+        Descripcion:'muñeca de 20cm',
         Imagen:'../src/productos/8.jpg'
     },
     {
@@ -68,7 +68,7 @@ export const DB=[
         Nombre:'muñeco de buzz lightyear',
         Precio:45000,
         categoria:'Figuras',
-        Descripcion:'peluche de 20cm',
+        Descripcion:'muñeco de 20cm',
         Imagen:'../src/productos/9.jpg'
     },
     {
@@ -76,7 +76,7 @@ export const DB=[
         Nombre:'muñeco de woody',
         Precio:45000,
         categoria:'Figuras',
-        Descripcion:'peluche de 20cm',
+        Descripcion:'muñeco de 20cm',
         Imagen:'../src/productos/10.jpg'
     },
     {
@@ -84,7 +84,7 @@ export const DB=[
         Nombre:'muñeco de spiderman',
         Precio:45000,
         categoria:'Figuras',
-        Descripcion:'peluche de 20cm',
+        Descripcion:'muñeco de 20cm',
         Imagen:'../src/productos/11.jpg'
     },
     {
@@ -92,7 +92,7 @@ export const DB=[
         Nombre:'muñeco de ironman',
         Precio:45000,
         categoria:'Figuras',
-        Descripcion:'peluche de 20cm',
+        Descripcion:'muñeco de 25cm',
         Imagen:'../src/productos/12.jpg'
     },
     {
@@ -100,7 +100,7 @@ export const DB=[
         Nombre:'muñeco de darth vader',
         Precio:45000,
         categoria:'Figuras',
-        Descripcion:'peluche de 20cm',
+        Descripcion:'muñeco de 30cm',
         Imagen:'../src/productos/13.jpg'
     },
     {
@@ -108,7 +108,7 @@ export const DB=[
         Nombre:'muñeco de yoda',
         Precio:45000,
         categoria:'Figuras',
-        Descripcion:'peluche de 20cm',
+        Descripcion:'muñeco de 60cm',
         Imagen:'../src/productos/14.jpg'
     },
     {
@@ -116,7 +116,7 @@ export const DB=[
         Nombre:'Mochila de la sirenita',
         Precio:45000,
         categoria:'Mochilas',
-        Descripcion:'peluche de 20cm',
+        Descripcion:'mochila rosa con dibujos de la sirenita',
         Imagen:'../src/productos/15.jpg'
     },
     {
@@ -124,15 +124,15 @@ export const DB=[
         Nombre:'Mochila de stitch',
         Precio:45000,
         categoria:'Mochilas',
-        Descripcion:'peluche de 20cm',
-        Imagen:'../src/productos/16.jpg'
+        Descripcion:'mochila negra de stitch',
+        Imagen:'../src/productos/16.png'
     },
     {
         ID:6,
         Nombre:'Mochila de mickey mouse',
         Precio:45000,
         categoria:'Mochilas',
-        Descripcion:'peluche de 20cm',
+        Descripcion:'mochila roja y negra con dibujos de mickey mouse',
         Imagen:'../src/productos/17.jpg'
     },
     {
@@ -140,7 +140,7 @@ export const DB=[
         Nombre:'Taza de mickey & minnie',
         Precio:45000,
         categoria:'Tazas',
-        Descripcion:'peluche de 20cm',
+        Descripcion:'taza de ceramica con dibujos de mickey y minnie',
         Imagen:'../src/productos/18.jpg'
     },
     {
@@ -148,7 +148,7 @@ export const DB=[
         Nombre:'taza de stitch',
         Precio:45000,
         categoria:'Tazas',
-        Descripcion:'peluche de 20cm',
+        Descripcion:'taza de ceramica con dibujos de stitch',
         Imagen:'../src/productos/19.jpg'
     },
     {
@@ -156,7 +156,7 @@ export const DB=[
         Nombre:'taza de elsa',
         Precio:45000,
         categoria:'Tazas',
-        Descripcion:'peluche de 20cm',
+        Descripcion:'taza de ceramica con dibujos de elsa',
         Imagen:'../src/productos/20.jpg'
     }
 ]

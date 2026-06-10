@@ -99,6 +99,16 @@ body {
 
 /* Clásicos */
 
+.titulo_clasicos{
+    text-align:center;
+    margin:50px 0;
+}
+
+.titulo_clasicos h1{
+    font-family:"disneyfont";
+    font-size:70px;
+}
+
 .contenedor_clasicos {
     width: 95%;
     margin: 60px auto;
@@ -109,15 +119,19 @@ body {
 }
 
 .clasicos {
-    width: 300px;
-    height: 550px; 
+    width: 320px;
+    height: 520px; 
     border-radius: 15px;
+    background: white;
     overflow: hidden;
+    border-radius: 20px;
     text-align: center;
     color: white;
-    box-shadow: 0 0 15px rgba(255,255,255,.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
     animation: mover 2s linear forwards;
+    transition: 0.4s;
     opacity: 0;
+    position: relative;
     animation-timeline: view();
     animation-range: entry 0;
 }
@@ -134,31 +148,34 @@ body {
 }
 
 .clasicos:hover{
-    transform: translateY(-150px);
-    box-shadow: 0 0 25px rgba(255,255,255,.3);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,.25);
 }
 
 .clasicos img{
     width: 100%;
-    height: 450px;
+    height: 400px;
     object-fit: cover;
 }
 
 .clasicos h1{
-    margin-top: 5px;
-    font-size: 20px;
+    padding: 10px;
+    font-size: 22px;
     font-weight: bold;
+    color: #222;
 }
 
 .clasicos h2{
-    margin-top: 5px;
-    font-size: 18px;
+    padding: 15px;
+    font-size: 15px;
+    color: #666;
 }
 
 .clasicos p{
-    padding: 15px;
-    color: #000000;
-    line-height: 1.5;
+    font-size: 15px;
+    padding: 10px;
+    color: #444;
+    overflow: hidden;
 }
 
 .img1 {
@@ -448,11 +465,122 @@ footer {
 
 .btnfav{
     background:#ffb6c1;
+    position:relative;
+    overflow:hidden;
+}
+
+.animar-favorito{
+    animation: favorito .6s ease;
+}
+
+@keyframes favorito{
+
+    0%{
+        transform:scale(1);
+    }
+
+    30%{
+        transform:scale(1.4);
+    }
+
+    50%{
+        transform:scale(.9);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+.estrella{
+    position:absolute;
+    animation: estrellas 1s forwards;
+    font-size:20px;
+    pointer-events:none;
+    z-index:100;
+    left:50%;
+    top:50%;
+}
+
+@keyframes estrellas{
+
+    0%{
+        opacity:1;
+        transform:
+        translate(-50%,-50%)
+        scale(1);
+    }
+
+    100%{
+        opacity:0;
+        transform:
+        translate(
+            calc(-50% + var(--x)),
+            calc(-50% + var(--y))
+        )
+        scale(2);
+    }
+
 }
 
 .btncarrito{
     background:#7da9d8;
     color:white;
+}
+
+.animar-carrito{
+    animation: carrito .8s ease;
+}
+
+.imagen-voladora{
+    position:fixed;
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border-radius:10px;
+    pointer-events:none;
+    z-index:9999;
+    animation: volarAlCarrito 1s ease-in-out forwards;
+}
+
+@keyframes volarAlCarrito{
+
+    0%{
+        transform:scale(1);
+        opacity:1;
+    }
+
+    100%{
+        transform:
+        translate(var(--x), var(--y))
+        scale(.2);
+
+        opacity:0;
+    }
+
+}
+@keyframes carrito{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    20%{
+        transform:translateY(-15px);
+    }
+
+    40%{
+        transform:translateY(0);
+    }
+
+    60%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
 }
 
 .btnfav:hover, .btncarrito:hover{
