@@ -320,3 +320,148 @@ footer {
     line-height: 25px;
     color: #000000;
 }
+
+/* Productos */
+
+.productos{
+    width: 95%;
+    margin: 30px auto;
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.banner_productos{
+    width:95%;
+    margin:30px auto;
+    height:250px;
+    background:url("../src/Fondos/Fondo.jpg");
+    background-size:cover;
+    background-position:center;
+    border-radius:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-shadow:2px 2px 5px black;
+}
+
+.banner_productos h1{
+    font-family:"disneyfont";
+    font-size:70px;
+}
+
+.contenedor{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:25px;
+    flex:1;
+}
+.contenedor_form{
+    width: 260px;
+    min-width: 260px;
+    background: #e7decb;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+    position: sticky;
+    top: 20px;
+}
+
+.contenedor_form label{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:12px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.contenedor_form h2{
+    font-family:"disneyfont";
+    margin-top:20px;
+    margin-bottom:12px;
+    padding-bottom:5px;
+    border-bottom:1px solid #c7baa0;
+}
+
+.contenedor_form input[type="text"], .contenedor_form select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.contenedor_form input[type="radio"]{
+    width: auto;
+    margin: 0;
+}
+
+.tarjetas{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    text-align:center;
+    padding-bottom:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.4s;
+}
+
+.tarjetas:hover{
+    transform:translateY(-10px);
+}
+
+.tarjetas img{
+    width:100%;
+    height:280px;
+    object-fit:contain;
+    transition:.4s;
+}
+
+.tarjetas img:hover{
+   transform:scale(1.05);
+}   
+
+.tarjetas h1{
+    padding: 15px 10px 5px;
+}
+
+.tarjetas h2{
+    margin-bottom: 10px;
+}
+
+.tarjetas p{
+    min-height: 60px;
+}
+
+.btnfav, .btncarrito{
+    border:none;
+    border-radius:10px;
+    padding:10px;
+    width:90%;
+    margin:5px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btnfav{
+    background:#ffb6c1;
+}
+
+.btncarrito{
+    background:#7da9d8;
+    color:white;
+}
+
+.btnfav:hover, .btncarrito:hover{
+    transform:scale(1.05);
+}
+
+.barra_productos{
+    width: 95%;
+    margin: 20px auto;
+    font-size: 22px;
+    font-weight: bold;
+}

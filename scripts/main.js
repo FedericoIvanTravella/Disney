@@ -4,98 +4,183 @@ setTimeout(() => {
         location.href='Pages/home.html'
     }, 800);
 }, 1700);
-a
-import { DB } from "/scripts/db.js";
+
+import { DB } from "./db.js";
+
+/* ---------------- VARIABLES ---------------- */
+
+let Filtro = document.querySelector("#Filtro");
+let ordenar = document.querySelector("#ordenar");
+
+const categorias = document.querySelectorAll(
+    'input[name="categoria"]'
+);
+
+/* ---------------- MOSTRAR PRODUCTOS ---------------- */
 
 function TraerDatos(Datos) {
 
-    let contenedor = document.querySelector('.contenedor')
+    let contenedor =
+    document.querySelector(".contenedor");
+
     contenedor.innerHTML = "";
 
     Datos.forEach(i => {
-        let ContenedorAux = document.createElement('div')
-        ContenedorAux.className = 'tarjetas'
-       ContenedorAux.innerHTML =
-`a
-<img src="${i.Imagen}" alt="${i.Nombre}">
 
-<h1>${i.Nombre}</h1>
+        let ContenedorAux =
+        document.createElement("div");
 
-<h2>$${i.Precio.toLocaleString()}</h2>
+        ContenedorAux.className =
+        "tarjetas";
 
-<h3>Stock: ${i.Stock}</h3>
+        ContenedorAux.innerHTML = `
+            <img src="${i.Imagen}" alt="${i.Nombre}">
 
-${i.Stock <= 3 ? '<p class="bajo-stock">Bajo Stock</p>' : ""}
+            <h1>${i.Nombre}</h1>
 
-<p>${i.Descripcion}</p>
+            <h2>$${i.Precio.toLocaleString()}</h2>
 
-<button onclick="agregarfavorito('${i.Nombre}')" class="btnfav">
-💕 Favorito
-</button>
+            <p>${i.Descripcion}</p>
 
-<button onclick="agregarCarrito('${i.Nombre}')" class="btncarrito">
-🛒 Comprar
-</button>
-`
-        contenedor.appendChild(ContenedorAux)
+            <button
+            onclick="agregarfavorito('${i.Nombre}')"
+            class="btnfav">
+                💕 Favorito
+            </button>
+
+            <button
+            onclick="agregarCarrito('${i.Nombre}')"
+            class="btncarrito">
+                🛒 Comprar
+            </button>
+        `;
+
+        contenedor.appendChild(
+            ContenedorAux
+        );
+
     });
 
 }
 
-document.getElementById("cantidad").innerText =
-    `Productos: ${DB.length}`;
-    
-TraerDatos(DB)
+/* ---------------- FILTROS ---------------- */
 
-let Filtro= document.querySelector('#Filtro')
-let Contenedor= document.querySelector('.contenedor')
+function aplicarFiltros() {
 
-Filtro.addEventListener('keyup', function(){
-    let Filtros= DB.filter(i=>i.Nombre.toLowerCase().includes(Filtro.value.toLocaleLowerCase()))
-    TraerDatos(Filtros)
-    if (Filtros.length>0) {
-        TraerDatos(Filtros)
+    let resultado = [...DB];
 
-    } else {
-        Contenedor.innerHTML=`<p>Producto NO Encontrado</p>`
+    let texto =
+    Filtro.value.toLowerCase();
+
+    resultado = resultado.filter(
+        producto =>
+        producto.Nombre
+        .toLowerCase()
+        .includes(texto)
+    );
+
+    let categoriaSeleccionada =
+    document.querySelector(
+        'input[name="categoria"]:checked'
+    ).value;
+
+    if(categoriaSeleccionada !== "Todos") {
+
+        resultado = resultado.filter(
+            producto =>
+            producto.categoria ===
+            categoriaSeleccionada
+        );
+
     }
 
-})
+    if(ordenar.value === "menor") {
 
-let contador= 0;
-let carrito= 0;
+        resultado.sort(
+            (a,b) =>
+            a.Precio - b.Precio
+        );
+
+    }
+
+    if(ordenar.value === "mayor") {
+
+        resultado.sort(
+            (a,b) =>
+            b.Precio - a.Precio
+        );
+
+    }
+
+    if(resultado.length > 0) {
+
+        TraerDatos(resultado);
+
+    } else {
+
+        document.querySelector(
+            ".contenedor"
+        ).innerHTML =
+        "<p>Producto no encontrado</p>";
+
+    }
+
+}
+
+/* ---------------- EVENTOS ---------------- */
+
+Filtro.addEventListener(
+    "keyup",
+    aplicarFiltros
+);
+
+ordenar.addEventListener(
+    "change",
+    aplicarFiltros
+);
+
+categorias.forEach(categoria => {
+
+    categoria.addEventListener(
+        "change",
+        aplicarFiltros
+    );
+
+});
+
+/* ---------------- CONTADOR ---------------- */
+
+document.getElementById("cantidad").innerText =
+`Productos: ${DB.length}`;
+
+/* ---------------- CARGA INICIAL ---------------- */
+
+TraerDatos(DB);
+
+/* ---------------- FAVORITOS ---------------- */
+
+let contador = 0;
+
+window.agregarfavorito = function(nombre){
+
+    contador++;
+
+    console.log(
+        nombre +
+        " agregado a favoritos"
+    );
+
+}
+
+/* ---------------- CARRITO ---------------- */
+
+let carrito = 0;
 
 window.agregarCarrito = function(nombre){
     carrito++;
-    document.getElementById("carrito").innerText = carrito;
-
-    const toast = new bootstrap.Toast(
-        document.getElementById("toastCarrito")
+    console.log(
+        nombre +
+        " agregado al carrito"
     );
 
-    toast.show();
 }
-
-window.agregarfavorito=function(nombre) {
-    contador++;
-    document.getElementById('fav').innerText=contador;
-    console.log(nombre + " agregado a favoritos");
-}
-
-// Ordenar por precio
- let ordenar = document.querySelector('#ordenar');
-
- ordenar.addEventListener('change', function(){
-
-    let copia = [...DB];
-
-     if(this.value === 'menor'){
-         copia.sort((a,b) => a.Precio - b.Precio);
-    }
-
-     if(this.value === 'mayor'){
-         copia.sort((a,b) => b.Precio - a.Precio);
-    }
-
-    TraerDatos(copia);
-});
