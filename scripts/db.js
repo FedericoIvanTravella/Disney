@@ -1,162 +1,162 @@
 export const DB=[
     {
         ID:1,
-        Nombre:'Peluche de mickey mouse',
+        Nombre:'Peluche de Mickey Mouse',
         Precio:63000,
         categoria:'Peluches',
-        Descripcion:'peluche de 30cm',    
+        Descripcion:'Peluche de 30cm',    
         Imagen:'../src/productos/1.jpg'
     },
     {
         ID:2,
-        Nombre:'Peluche de minnie mouse',
+        Nombre:'Peluche de Minnie Mouse',
         Precio:55000,
         categoria:'Peluches',
-        Descripcion:'peluche de 25cm',
+        Descripcion:'Peluche de 25cm',
         Imagen:'../src/productos/2.jpg'
     },
     {
         ID:3,
-        Nombre:'Peluche de stitch',
+        Nombre:'Peluche de Stitch',
         Precio:45000,
         categoria:'Peluches',
-        Descripcion:'peluche de 20cm',
+        Descripcion:'Peluche de 20cm',
         Imagen:'../src/productos/3.jpg'
     },
     {
         ID:4,
-        Nombre:'Peluche de winnie the pooh',
+        Nombre:'Peluche de Winne the Pooh',
         Precio:50000,
         categoria:'Peluches',
-        Descripcion:'peluche de 30cm',
+        Descripcion:'Peluche de 30cm',
         Imagen:'../src/productos/4.jpg'
     },
     {
         ID:5,
-        Nombre:'Muñeca elsa',
+        Nombre:'Muñeca Elsa',
         Precio:55000,
         categoria:'Figuras',
-        Descripcion:'muñeca de 25cm',
+        Descripcion:'Muñeca de 25cm',
         Imagen:'../src/productos/5.jpg'
     },
     {
         ID:6,
-        Nombre:'Muñeca anna',
+        Nombre:'Muñeca Anna',
         Precio:55000,
         categoria:'Figuras',
-        Descripcion:'muñeca de 20cm',
+        Descripcion:'Muñeca de 20cm',
         Imagen:'../src/productos/6.jpg'
     },
     {
         ID:6,
-        Nombre:'muñeca rapunzel',
+        Nombre:'Muñeca Rapunzel',
         Precio:45000,
         categoria:'Figuras',
-        Descripcion:'muñeca de 20cm',
+        Descripcion:'Muñeca de 20cm',
         Imagen:'../src/productos/7.jpg'
     },
     {
         ID:6,
-        Nombre:'muñeca la sirenita',
+        Nombre:'Muñeca La Sirenita',
         Precio:45000,
         categoria:'Figuras',
-        Descripcion:'muñeca de 20cm',
+        Descripcion:'Muñeca de 20cm',
         Imagen:'../src/productos/8.jpg'
     },
     {
         ID:6,
-        Nombre:'muñeco de buzz lightyear',
+        Nombre:'Muñeco de Buzz Lightyear',
         Precio:45000,
         categoria:'Figuras',
-        Descripcion:'muñeco de 20cm',
+        Descripcion:'Muñeco de 20cm',
         Imagen:'../src/productos/9.jpg'
     },
     {
         ID:6,
-        Nombre:'muñeco de woody',
+        Nombre:'Muñeco de Woody',
         Precio:45000,
         categoria:'Figuras',
-        Descripcion:'muñeco de 20cm',
+        Descripcion:'Muñeco de 20cm',
         Imagen:'../src/productos/10.jpg'
     },
     {
         ID:6,
-        Nombre:'muñeco de spiderman',
+        Nombre:'Muñeco de Spiderman',
         Precio:45000,
         categoria:'Figuras',
-        Descripcion:'muñeco de 20cm',
+        Descripcion:'Muñeco de 20cm',
         Imagen:'../src/productos/11.jpg'
     },
     {
         ID:6,
-        Nombre:'muñeco de ironman',
+        Nombre:'Muñeco de Ironman',
         Precio:45000,
         categoria:'Figuras',
-        Descripcion:'muñeco de 25cm',
+        Descripcion:'Muñeco de 25cm',
         Imagen:'../src/productos/12.jpg'
     },
     {
         ID:6,
-        Nombre:'muñeco de darth vader',
+        Nombre:'Muñeco de Darth Vadar',
         Precio:45000,
         categoria:'Figuras',
-        Descripcion:'muñeco de 30cm',
+        Descripcion:'Muñeco de 30cm',
         Imagen:'../src/productos/13.jpg'
     },
     {
         ID:6,
-        Nombre:'muñeco de yoda',
+        Nombre:'Muñeco de Yoda',
         Precio:45000,
         categoria:'Figuras',
-        Descripcion:'muñeco de 60cm',
+        Descripcion:'Muñeco de 60cm',
         Imagen:'../src/productos/14.jpg'
     },
     {
         ID:6,
-        Nombre:'Mochila de la sirenita',
+        Nombre:'Mochila de La Sirenita',
         Precio:45000,
         categoria:'Mochilas',
-        Descripcion:'mochila rosa con dibujos de la sirenita',
+        Descripcion:'Mochila rosa con dibujos de La Sirenita',
         Imagen:'../src/productos/15.jpg'
     },
     {
         ID:6,
-        Nombre:'Mochila de stitch',
+        Nombre:'Mochila de Stitch',
         Precio:45000,
         categoria:'Mochilas',
-        Descripcion:'mochila negra de stitch',
+        Descripcion:'Mochila negra de Stitch',
         Imagen:'../src/productos/16.png'
     },
     {
         ID:6,
-        Nombre:'Mochila de mickey mouse',
+        Nombre:'Mochila de Mickey Mouse',
         Precio:45000,
         categoria:'Mochilas',
-        Descripcion:'mochila roja y negra con dibujos de mickey mouse',
+        Descripcion:'Mochila roja y negra con dibujos de mickey mouse',
         Imagen:'../src/productos/17.jpg'
     },
     {
         ID:6,
-        Nombre:'Taza de mickey & minnie',
+        Nombre:'Taza de Mickey & Minnie',
         Precio:45000,
         categoria:'Tazas',
-        Descripcion:'taza de ceramica con dibujos de mickey y minnie',
+        Descripcion:'Taza de cerámica con dibujos de Mickey y Minnie Mouse',
         Imagen:'../src/productos/18.jpg'
     },
     {
         ID:6,
-        Nombre:'taza de stitch',
+        Nombre:'Taza de Stitch',
         Precio:45000,
         categoria:'Tazas',
-        Descripcion:'taza de ceramica con dibujos de stitch',
+        Descripcion:'Taza de cerámica con dibujos de Stitch',
         Imagen:'../src/productos/19.jpg'
     },
     {
         ID:6,
-        Nombre:'taza de elsa',
+        Nombre:'Taza de Elsa',
         Precio:45000,
         categoria:'Tazas',
-        Descripcion:'taza de ceramica con dibujos de elsa',
+        Descripcion:'Taza de cerámica con dibujos de Elsa',
         Imagen:'../src/productos/20.jpg'
     }
 ]

@@ -7,7 +7,7 @@ setTimeout(() => {
 
 import { DB } from "./db.js";
 
-/* ---------------- VARIABLES ---------------- */
+/*  VARIABLES  */
 
 let Filtro = document.querySelector("#Filtro");
 let ordenar = document.querySelector("#ordenar");
@@ -16,7 +16,7 @@ const categorias = document.querySelectorAll(
     'input[name="categoria"]'
 );
 
-/* ---------------- MOSTRAR PRODUCTOS ---------------- */
+/*  MOSTRAR PRODUCTOS  */
 
 function TraerDatos(Datos) {
 
@@ -63,7 +63,7 @@ function TraerDatos(Datos) {
 
 }
 
-/* ---------------- FILTROS ---------------- */
+/*  FILTROS  */
 
 function aplicarFiltros() {
 
@@ -127,7 +127,7 @@ function aplicarFiltros() {
 
 }
 
-/* ---------------- EVENTOS ---------------- */
+/*  EVENTOS  */
 
 Filtro.addEventListener(
     "keyup",
@@ -148,16 +148,16 @@ categorias.forEach(categoria => {
 
 });
 
-/* ---------------- CONTADOR ---------------- */
+// /*  CONTADOR  */
 
-document.getElementById("cantidad").innerText =
-`Productos: ${DB.length}`;
+// document.getElementById("cantidad").innerText =
+// `Productos: ${DB.length}`;
 
-/* ---------------- CARGA INICIAL ---------------- */
+/*  CARGA INICIAL  */
 
 TraerDatos(DB);
 
-/* ---------------- FAVORITOS ---------------- */
+/*  FAVORITOS  */
 
 let contador = 0;
 
@@ -231,7 +231,7 @@ window.agregarfavorito = function(nombre){
 
 }
 
-/* ---------------- CARRITO ---------------- */
+/*  CARRITO  */
 
 let carrito = 0;
 

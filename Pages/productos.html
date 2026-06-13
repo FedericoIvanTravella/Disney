@@ -1,85 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Productos</title>
-    <link rel="stylesheet" href="../css/style.css" />
-  </head>
-  
-  <body>
-    <header class="encabezado">
-      <a href="../Pages/home.html"> <img src="../src/Logo/Logo.png" alt="Logo" title="Home" /> </a>
-       <nav class="menu">
-      <div id="iconoCarrito">
-    🛒 <span id="carrito">0</span>
-      </div>
-        <a href="../Pages/contactos.html" class="btn_menu">Contactos</a>
-        <a href="../Pages/clasicos.html" class="btn_menu">Clásicos</a>
-        <a href="../Pages/productos.html" class="btn_menu">Productos</a>
-        <a href="../Pages/pixar.html" class="btn_pixar">Pixar</a>
-       </nav>
-    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Productos</title>
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
 
-    <main>
-  <section class="banner_productos">
-    <h1>Disney Store</h1>
-  </section>
-    <div class="barra_productos">
-      <p id="cantidad"></p>
-    </div>
-      <div class="productos">
-        <div class="contenedor_form">
-      <h2> Buscar </h2>
-        <input type="text" id="Filtro" placeholder="Buscar producto...">
-        <h2> Ordenar </h2>
-        <select id="ordenar">
-          <option value="">Ordenar por precio</option>
-           <option value="menor">Menor precio</option>
-          <option value="mayor">Mayor precio</option>
-        </select>
-         <h2>📦 Categorías</h2>
+    <body>
+        <header class="encabezado">
+            <a href="../Pages/home.html"> <img src="../src/Logo/Logo.png" alt="Logo" title="Home" /> </a>
+            <nav class="menu">
+                <div id="iconoCarrito">🛒 <span id="carrito">0</span></div>
+                <a href="../Pages/contactos.html" class="btn_menu">Contactos</a>
+                <a href="../Pages/clasicos.html" class="btn_menu">Clásicos</a>
+                <a href="../Pages/productos.html" class="btn_menu">Productos</a>
+                <a href="../Pages/pixar.html" class="btn_pixar">Pixar</a>
+            </nav>
+        </header>
 
-  <label>
-    <input type="radio" name="categoria" value="Todos" checked>
-    Todos
-  </label>
+        <main>
+            <section class="banner_productos">
+                <h1>Disney Store</h1>
+            </section>
+            <div class="barra_productos">
+                <p id="cantidad"></p>
+            </div>
+            <div class="productos">
+                <div class="contenedor_form">
+                    <h2>Buscar</h2>
+                    <input type="text" id="Filtro" placeholder="Buscar producto..." />
+                    <h2>Ordenar</h2>
+                    <select id="ordenar">
+                        <option value="">Ordenar por precio</option>
+                        <option value="menor">Menor precio</option>
+                        <option value="mayor">Mayor precio</option>
+                    </select>
+                    <h2>📦 Categorías</h2>
 
-  <label>
-    <input type="radio" name="categoria" value="Peluches">
-    Peluches
-  </label>
+                    <label>
+                        <input type="radio" name="categoria" value="Todos" checked />
+                        Todos
+                    </label>
 
-  <label>
-    <input type="radio" name="categoria" value="Figuras">
-    Figuras
-  </label>
+                    <label>
+                        <input type="radio" name="categoria" value="Peluches" />
+                        Peluches
+                    </label>
 
-  <label>
-    <input type="radio" name="categoria" value="Ropa">
-    Ropa
-  </label>
+                    <label>
+                        <input type="radio" name="categoria" value="Figuras" />
+                        Figuras
+                    </label>
 
-  <label>
-    <input type="radio" name="categoria" value="Tazas">
-    Tazas
-  </label>
+                    <label>
+                        <input type="radio" name="categoria" value="Ropa" />
+                        Ropa
+                    </label>
 
-  <label>
-    <input type="radio" name="categoria" value="Mochilas">
-    Mochilas
-  </label>
-      </div>
-        <div class="contenedor"></div>
-        <div class="Favorito"></div>
-      </div>
-    </main>
-      <script type="module" src="../scripts/main.js"></script>
-    <footer>
-      <div class="infofooter">
-        <img src="../src/Logo/Logo.png" alt="Logo" />
-        <p>© Disney. All rights reserved.</p>
-      </div>
-    </footer>
-  </body>
+                    <label>
+                        <input type="radio" name="categoria" value="Tazas" />
+                        Tazas
+                    </label>
+
+                    <label>
+                        <input type="radio" name="categoria" value="Mochilas" />
+                        Mochilas
+                    </label>
+                </div>
+                <div class="contenedor"></div>
+                <div class="Favorito"></div>
+            </div>
+        </main>
+        <script type="module" src="../scripts/main.js"></script>
+        <footer>
+            <div class="infofooter">
+                <img src="../src/Logo/Logo.png" alt="Logo" />
+                <p>© Disney. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
 </html>
