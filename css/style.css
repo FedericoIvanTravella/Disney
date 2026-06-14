@@ -101,7 +101,6 @@ body {
 
 .clasicos_body {
     background: #f0e9d9;
-
 }
 
 .banner_clasicos {
@@ -154,8 +153,8 @@ body {
 }
 
 .galeria {
-    width: 85%;
-    height: 90%;
+    width: 99%;
+    height: 50%;
     margin: 45px auto;
     display: grid;
     grid-template-areas: 
@@ -209,7 +208,6 @@ body {
     border-radius: 20px;
     background: white;
     overflow: hidden;
-    border-radius: 20px;
     text-align: center;
     color: white;
     box-shadow: 0 5px 15px rgba(0,0,0,.15);
@@ -331,6 +329,64 @@ form button:hover {
     background: linear-gradient(to right, #83120a, #E11B22);
     transform: scale(1);
     box-shadow: 1px 1px 3px rgb(89, 88, 88);
+}
+
+/* Pixar */
+
+.pixar_body {
+    background: #f0e9d9;
+}
+
+.banner_pixar {
+    width: 95%;
+    margin: 30px auto;
+    height: 380px;
+    background: url("../src/Fondos/Fondo_Pixar.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+.banner_pixar h1{
+    font-family:"disneyfont";
+    font-size:70px;
+}
+
+.colecciones_pixar {
+    width: 90%;
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.tarjetas_pixar {
+    width: 250px;
+    border-radius: 15px;
+    background: white;
+    overflow: hidden;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+    animation: mover 2s linear forwards;
+    transition: 0.4s;
+}
+
+.tarjetas_pixar:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(255,255,255,.3);
+}
+
+.tarjetas_pixar img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
 }
 
 footer {
