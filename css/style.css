@@ -88,6 +88,10 @@ body {
 
 /* Home */
 
+.home_body {
+    background: #f0e9d9;
+}
+
 .carrusel {
     box-shadow: 10px 10px 15px #000000;
 }
@@ -96,6 +100,76 @@ body {
     height: 600px;
     object-fit: cover;
 }
+
+.proximos_estrenos {
+    font-family: "disneyfont";
+    font-size: 50px;
+    margin: 30px 50px;
+    border-bottom: 2px solid #757168;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+.contenedor_estrenos {
+    width: 98%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.estrenos {
+    width: 280px;
+    height: 410px;
+    border-radius: 20px;
+    background: white;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    animation: mover 2s linear forwards;
+    transition: 0.4s;
+    position: relative;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+
+.estrenos:hover {
+    height: 490px;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.estrenos img {
+    width: 100%;
+    height: 410px;
+}
+
+.estrenos h2 {
+    padding: 5px;
+    font-size: 16px;
+    color: #000000;
+}
+
+.estrenos p {
+    opacity: 0;
+    max-height: 0;
+    margin-bottom: 8px;
+    overflow: hidden;
+    transition: 0.4s ease;
+    color: #850000;
+    font-weight: bold;
+}
+
+.estrenos:hover p {
+    opacity: 1;
+    max-height: 50px;
+}
+
 
 /* Clásicos */
 
@@ -180,16 +254,6 @@ body {
 .galeria img:hover {
     transform: scale(0.9);
     box-shadow: 3px 2px 5px rgb(0, 0, 0);
-}
-
-.titulo_clasicos {
-    text-align: center;
-    margin: 50px 0;
-}
-
-.titulo_clasicos h1 {
-    font-family: "disneyfont";
-    font-size: 70px;
 }
 
 .contenedor_clasicos {
@@ -591,7 +655,7 @@ footer {
 .tarjetas h1 {
     padding: 15px 10px 5px;
     height: 60px;
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .tarjetas h2 {
