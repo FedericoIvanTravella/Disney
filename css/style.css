@@ -10,7 +10,7 @@
 }
 
 body {
-    background: #f4eee2;
+    background: #f0e9d9;
 }
 
 .fondo {
@@ -32,7 +32,7 @@ body {
     display: flex;
     justify-content: space-between;
     background-color: #e7decb;
-    box-shadow: 5px 5px 10px #000000;
+    box-shadow: 5px 5px 10px #575757;
 }
 
 .encabezado img {
@@ -88,6 +88,10 @@ body {
 
 /* Home */
 
+.home_body {
+    background: #f0e9d9;
+}
+
 .carrusel {
     box-shadow: 10px 10px 15px #000000;
 }
@@ -97,85 +101,101 @@ body {
     object-fit: cover;
 }
 
-/* Clásicos */
-
-.titulo_clasicos{
-    text-align:center;
-    margin:50px 0;
+.proximos_estrenos {
+    font-family: "disneyfont";
+    font-size: 50px;
+    margin: 30px 50px;
+    border-bottom: 2px solid #757168;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 5px black;
 }
 
-.titulo_clasicos h1{
-    font-family:"disneyfont";
-    font-size:70px;
-}
-
-.contenedor_clasicos {
-    width: 95%;
-    margin: 60px auto;
+.contenedor_estrenos {
+    width: 98%;
+    margin: 50px auto;
     display: flex;
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
 }
 
-.clasicos {
-    width: 320px;
-    height: 520px; 
-    border-radius: 15px;
+.estrenos {
+    width: 280px;
+    height: 410px;
+    border-radius: 20px;
     background: white;
     overflow: hidden;
-    border-radius: 20px;
     text-align: center;
     color: white;
-    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     animation: mover 2s linear forwards;
     transition: 0.4s;
-    opacity: 0;
     position: relative;
     animation-timeline: view();
     animation-range: entry 0;
 }
 
-@keyframes mover {
-    from {
-        opacity: 0;
-        scale: 0.5;
-    }
-    to {
-        opacity: 1;
-        scale: 1;
-    }
-}
-
-.clasicos:hover{
+.estrenos:hover {
+    height: 490px;
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,.25);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
 }
 
-.clasicos img{
+.estrenos img {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    height: 410px;
 }
 
-.clasicos h1{
-    padding: 10px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #222;
+.estrenos h2 {
+    padding: 5px;
+    font-size: 16px;
+    color: #000000;
 }
 
-.clasicos h2{
-    padding: 15px;
-    font-size: 15px;
-    color: #666;
-}
-
-.clasicos p{
-    font-size: 15px;
-    padding: 10px;
-    color: #444;
+.estrenos p {
+    opacity: 0;
+    max-height: 0;
+    margin-bottom: 8px;
     overflow: hidden;
+    transition: 0.4s ease;
+    color: #850000;
+    font-weight: bold;
+}
+
+.estrenos:hover p {
+    opacity: 1;
+    max-height: 50px;
+}
+
+
+/* Clásicos */
+
+.clasicos_body {
+    background: #f0e9d9;
+}
+
+.banner_clasicos {
+    width: 95%;
+    margin: 30px auto;
+    height: 380px;
+    background: url("../src/Fondos/Fondo_Clásicos.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+.banner_clasicos h1 {
+    font-family: "disneyfont";
+    font-size: 70px;
 }
 
 .img1 {
@@ -206,19 +226,18 @@ body {
     grid-area: img7;
 }
 
-
 .galeria {
-    width: 85%;
-    height: 90%;
+    width: 99%;
+    height: 50%;
     margin: 45px auto;
     display: grid;
-    grid-template-areas: 
-    "img1 img1 img6 img6 img7 img7"
-    "img1 img1 img6 img6 img2 img2"
-    "img5 img3 img3 img4 img2 img2"
-    "img5 img3 img3 img4 img2 img2";
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(3,250px);
+    grid-template-areas:
+        "img1 img1 img6 img6 img7 img7"
+        "img1 img1 img6 img6 img2 img2"
+        "img5 img3 img3 img4 img2 img2"
+        "img5 img3 img3 img4 img2 img2";
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 250px);
     gap: 10px;
     padding: 0 10%;
 }
@@ -237,32 +256,94 @@ body {
     box-shadow: 3px 2px 5px rgb(0, 0, 0);
 }
 
-/* Contactos */ 
-
-.Contactos_body {
-    background-image: url("../src/Fondos/Fondo_contactos.jpg");
-    background-repeat: no-repeat; 
-    background-size: cover;
-    background-position: center;
+.contenedor_clasicos {
+    width: 95%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
+.clasicos {
+    width: 320px;
+    height: 410px;
+    border-radius: 20px;
+    background: white;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    animation: mover 2s linear forwards;
+    transition: 0.4s;
+    position: relative;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+
+@keyframes mover {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.clasicos:hover {
+    height: 640px;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.clasicos img {
+    width: 100%;
+    height: 410px;
+}
+
+.clasicos h2 {
+    padding: 15px;
+    font-size: 16px;
+    color: #000000;
+}
+
+.clasicos p {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease;
+    padding: 0 15px;
+    color: #000000;
+}
+
+.clasicos:hover p {
+    opacity: 1;
+    max-height: 200px;
+    padding: 10 15px;
+}
+
+/* Contactos */
+
 .contenedor_contactos {
-    width: 750px;
-    height: 750px;
+    width: 1000px;
+    height: 700px;
     border-radius: 10px;
     background-color: #f6f6f6;
     padding: 20px;
     margin: 50px auto;
     display: flex;
-    box-shadow: 5px 5px 10px #0e0c0c;   
+    box-shadow: 5px 5px 10px #0e0c0c;
 }
 
 .contenedor_contactos img {
     border-radius: 20px 0 0 20px;
-    width: 150px;
+    width: 60%;
 }
 
 form {
+    width: 40%;
     padding: 20px;
     width: 100%;
 }
@@ -294,7 +375,7 @@ form button {
     height: 40px;
     width: 100%;
     border-radius: 15px;
-    background-color: #E11B22;
+    background-color: #e11b22;
     font-family: "disneyfont", sans-serif;
     font-size: 28px;
     color: #ffffff;
@@ -302,19 +383,78 @@ form button {
 }
 
 form button:hover {
-    background: linear-gradient(to right, #83120a, #E11B22);
+    background: linear-gradient(to right, #83120a, #e11b22);
     transform: scale(1);
     box-shadow: 1px 1px 3px rgb(89, 88, 88);
+}
+
+/* Pixar */
+
+.pixar_body {
+    background: #f0e9d9;
+}
+
+.banner_pixar {
+    width: 95%;
+    margin: 30px auto;
+    height: 380px;
+    background: url("../src/Fondos/Fondo_Pixar.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+.banner_pixar h1 {
+    font-family: "disneyfont";
+    font-size: 70px;
+}
+
+.colecciones_pixar {
+    width: 90%;
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.tarjetas_pixar {
+    width: 250px;
+    border-radius: 15px;
+    background: white;
+    overflow: hidden;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    animation: mover 2s linear forwards;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.tarjetas_pixar:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+.tarjetas_pixar img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
 }
 
 footer {
     height: 120px;
     background: #e7decb;
-    width: 100%;    
+    width: 100%;
     padding: 15px;
 }
 
-.infofooter { 
+.infofooter {
     display: flex;
     justify-content: center;
 }
@@ -340,7 +480,7 @@ footer {
 
 /* Productos */
 
-.productos{
+.productos {
     width: 95%;
     margin: 30px auto;
     display: flex;
@@ -348,62 +488,132 @@ footer {
     align-items: flex-start;
 }
 
-.banner_productos{
-    width:95%;
-    margin:30px auto;
-    height:250px;
-    background:url("../src/Fondos/Fondo.jpg");
-    background-size:cover;
-    background-position:center;
-    border-radius:20px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    color:white;
-    text-shadow:2px 2px 5px black;
+.banner_productos {
+    width: 95%;
+    margin: 30px auto;
+    height: 250px;
+    background: url("../src/Fondos/Fondo_Productos.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 5px black;
 }
 
-.banner_productos h1{
-    font-family:"disneyfont";
-    font-size:70px;
+.banner_productos h1 {
+    font-family: "disneyfont";
+    font-size: 70px;
 }
 
-.contenedor{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-    gap:25px;
-    flex:1;
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    flex: 1;
 }
-.contenedor_form{
+
+.contenedor_form {
     width: 260px;
     min-width: 260px;
     background: #e7decb;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     position: sticky;
     top: 20px;
 }
 
-.contenedor_form label{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:12px;
-    cursor:pointer;
-    font-size:16px;
+.contenedor_form label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-.contenedor_form h2{
-    font-family:"disneyfont";
-    margin-top:20px;
-    margin-bottom:12px;
-    padding-bottom:5px;
-    border-bottom:1px solid #c7baa0;
+.contenedor_form h2 {
+    font-family: "disneyfont";
+    margin-top: 18px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #c7baa0;
 }
 
-.contenedor_form input[type="text"], .contenedor_form select{
+.iconos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px auto;
+}
+
+.iconos img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.icono1,
+.icono2,
+.icono3,
+.icono4, .icono5 img {
+    width: calc(50% - 10px);
+    height: 50px;
+    transition: all 0.6s ease-in-out;
+    background: #cfc2a9;
+    border-radius: 15px;
+    border: 1px solid #a19989;
+    overflow: hidden;
+}
+
+.iconos img:hover {
+    transform: scale(1.1);
+    transition: 1s ease-in-out;   
+    filter: drop-shadow(2px 2px 5px black);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.icono1 img:hover {
+    background-image: url("../src/Gifs/disney.gif");
+}
+
+.icono2 img:hover {
+    background-image: url("../src/Gifs/pixar.gif");
+}
+
+.icono3 img:hover {
+    background-image: url("../src/Gifs/marvel.gif");
+}
+
+.icono4 img:hover {
+    background-image: url("../src/Gifs/starwars.gif");
+}
+
+.btn-borrarfiltros {
+    width: 100%;
+    padding: 6px;
+    border: none;
+    border-radius: 15px;
+    background: #cfc2a9;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: light;
+    border: 1px solid #a19989;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-borrarfiltros:hover{
+    background: #ada28b;
+}
+
+.contenedor_form input[type="text"],
+.contenedor_form select {
     width: 100%;
     padding: 10px;
     border-radius: 10px;
@@ -411,183 +621,177 @@ footer {
     margin-bottom: 20px;
 }
 
-.contenedor_form input[type="radio"]{
+.contenedor_form input[type="radio"] {
     width: auto;
     margin: 0;
 }
 
-.tarjetas{
-    background:white;
-    border-radius:20px;
-    overflow:hidden;
-    text-align:center;
-    padding-bottom:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-    transition:.4s;
+.tarjetas {
+    height: 580px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: 0.4s;
 }
 
-.tarjetas:hover{
-    transform:translateY(-10px);
+.tarjetas:hover {
+    transform: translateY(-10px);
 }
 
-.tarjetas img{
-    width:100%;
-    height:280px;
-    object-fit:contain;
-    transition:.4s;
+.tarjetas img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    transition: 0.4s;
 }
 
-.tarjetas img:hover{
-   transform:scale(1.05);
-}   
+.tarjetas img:hover {
+    transform: scale(1.05);
+}
 
-.tarjetas h1{
+.tarjetas h1 {
     padding: 15px 10px 5px;
+    height: 60px;
+    font-size: 24px;
 }
 
-.tarjetas h2{
+.tarjetas h2 {
     margin-bottom: 10px;
+    height: 40px;
+    font-size: 25px;
 }
 
-.tarjetas p{
+.tarjetas p {
     min-height: 60px;
+    height: 25px;
+    font-size: 18px;
 }
 
-.btnfav, .btncarrito{
-    border:none;
-    border-radius:10px;
-    padding:10px;
-    width:90%;
-    margin:5px;
-    cursor:pointer;
-    transition:.3s;
+.btnfav,
+.btncarrito {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.btnfav{
-    background:#ffb6c1;
-    position:relative;
-    overflow:hidden;
+.btnfav {
+    background: #ffb6c1;
+    position: relative;
+    overflow: hidden;
 }
 
-.animar-favorito{
-    animation: favorito .6s ease;
+.animar-favorito {
+    animation: favorito 0.6s ease;
 }
 
-@keyframes favorito{
-
-    0%{
-        transform:scale(1);
+@keyframes favorito {
+    0% {
+        transform: scale(1);
     }
 
-    30%{
-        transform:scale(1.4);
+    30% {
+        transform: scale(1.4);
     }
 
-    50%{
-        transform:scale(.9);
+    50% {
+        transform: scale(0.9);
     }
 
-    100%{
-        transform:scale(1);
+    100% {
+        transform: scale(1);
     }
-
 }
 
-.estrella{
-    position:absolute;
+.estrella {
+    position: absolute;
     animation: estrellas 1s forwards;
-    font-size:20px;
-    pointer-events:none;
-    z-index:100;
-    left:50%;
-    top:50%;
+    font-size: 20px;
+    pointer-events: none;
+    z-index: 100;
+    left: 50%;
+    top: 50%;
 }
 
-@keyframes estrellas{
-
-    0%{
-        opacity:1;
-        transform:
-        translate(-50%,-50%)
-        scale(1);
+@keyframes estrellas {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
     }
 
-    100%{
-        opacity:0;
-        transform:
-        translate(
-            calc(-50% + var(--x)),
-            calc(-50% + var(--y))
-        )
-        scale(2);
+    100% {
+        opacity: 0;
+        transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(2);
     }
-
 }
 
-.btncarrito{
-    background:#7da9d8;
-    color:white;
+.btncarrito {
+    background: #7da9d8;
+    color: white;
 }
 
-.animar-carrito{
-    animation: carrito .8s ease;
+.animar-carrito {
+    animation: carrito 0.8s ease;
 }
 
-.imagen-voladora{
-    position:fixed;
-    width:80px;
-    height:80px;
-    object-fit:cover;
-    border-radius:10px;
-    pointer-events:none;
-    z-index:9999;
+.imagen-voladora {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    pointer-events: none;
+    z-index: 9999;
     animation: volarAlCarrito 1s ease-in-out forwards;
 }
 
-@keyframes volarAlCarrito{
-
-    0%{
-        transform:scale(1);
-        opacity:1;
+@keyframes volarAlCarrito {
+    0% {
+        transform: scale(1);
+        opacity: 1;
     }
 
-    100%{
-        transform:
-        translate(var(--x), var(--y))
-        scale(.2);
+    100% {
+        transform: translate(var(--x), var(--y)) scale(0.2);
 
-        opacity:0;
+        opacity: 0;
     }
-
 }
-@keyframes carrito{
-
-    0%{
-        transform:translateY(0);
+@keyframes carrito {
+    0% {
+        transform: translateY(0);
     }
 
-    20%{
-        transform:translateY(-15px);
+    20% {
+        transform: translateY(-15px);
     }
 
-    40%{
-        transform:translateY(0);
+    40% {
+        transform: translateY(0);
     }
 
-    60%{
-        transform:translateY(-8px);
+    60% {
+        transform: translateY(-8px);
     }
 
-    100%{
-        transform:translateY(0);
+    100% {
+        transform: translateY(0);
     }
 }
 
-.btnfav:hover, .btncarrito:hover{
-    transform:scale(1.05);
+.btnfav:hover,
+.btncarrito:hover {
+    transform: scale(1.05);
 }
 
-.barra_productos{
+.barra_productos {
     width: 95%;
     margin: 20px auto;
     font-size: 22px;
